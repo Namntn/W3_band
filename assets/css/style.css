@@ -40,9 +40,9 @@ html{
 }
 
 .col{
+    float: left;
     padding-left: 8px;
     padding-right: 8px;
-    float: left;
 }
 
 .col-third{
@@ -328,6 +328,7 @@ html{
 
 .contact-info i[class*="ti-"] {
     width: 30px;
+    display: inline-block;
 }
 
 .contact-form{
