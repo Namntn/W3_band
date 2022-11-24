@@ -6,6 +6,7 @@
         <title>The band</title>
         <link rel="icon" type="image/x-icon" href="https://cdn-icons-gif.flaticon.com/6172/6172517.gif">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -34,6 +35,10 @@
            <!-- Begin: Search button -->
            <div class="search-button">
                <i class="search-icon ti-search"></i>
+           </div>
+
+           <div id="mobile-menu" class="mobile-menu-btn">
+                <div class="menu-icon ti-menu"></div>
            </div>
            <!-- End: Search button -->
         </div>
@@ -238,6 +243,30 @@
         modalcontainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+
+        //Đóng/mở mobile menu
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        mobileMenu.onclick = function() {
+           var isClosed = header.clientHeight === headerHeight;
+           if (isClosed) {
+            header.style.height = 'auto';
+           } else {
+            header.style.height = null;
+           }
+        }
+
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function () {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 </html>
