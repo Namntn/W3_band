@@ -103,7 +103,6 @@ html{
     height: 46px;
     background-color: black;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav{
@@ -162,6 +161,13 @@ html{
 
 #nav .nav-arrow-down{
     font-size: 12px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .mobile-menu-btn,
@@ -256,8 +262,7 @@ html{
 }
 
 #content .member-list{
-    margin-top: 48px;
-    /* overflow: hidden; */
+    margin-top: 32px;
 }
 
 #content .member-name{
@@ -307,7 +312,7 @@ html{
 
 /* Places */
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img{
